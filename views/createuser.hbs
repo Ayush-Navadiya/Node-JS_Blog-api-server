@@ -1,0 +1,175 @@
+{{> aside}}
+{{> header}}
+
+<!--end::Head-->
+<!--begin::Body-->
+<div id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+<!--begin::Main-->
+<div class="d-flex flex-column flex-root">
+            <div class="d-flex flex-column-fluid flex-center">
+
+
+                <!--begin::Signin-->
+                <div class="login-form login-signin">
+                    <!--begin::Form-->
+
+                        <form class="form" novalidate="novalidate" id="kt_createuser_form" enctype="multipart/form-data">
+                        <!--begin::Title-->
+
+                            <input class="form-control" id="id" name="id" value="{{this._id}}" style="display:none;"/>
+                            <input class="form-control" id="imgpath" name="imgpath" value="{{this.image}}" style="display:none;"/>
+                            <input class="form-control" id="fnc" name="fnc" value="{{this.fnc}}" style="display:none;"/>
+
+                        <div class="pb-13 pt-lg-0 pt-5">
+                            <h3 class="font-weight-bolder text-dark font-size-h4 font-size-h1-lg">{{this.title}}</h3>
+                            <p class="text-muted font-weight-bold font-size-h4">Enter your details to create your account</p>
+                        </div>
+                        <!--end::Title-->
+                        <!--begin::Form group-->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" value="{{this.fname}}" type="text" placeholder="First name" name="cfname" autocomplete="off" value=""/>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" value="{{this.lname}}" type="text" placeholder="Last name" name="clname" autocomplete="off" />
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::Form group-->
+                        <!--begin::Form group-->
+
+
+
+
+                        <div class="form-group row">
+                            <div class="col-lg-9 col-xl-9">
+                                <div class="image-input image-input-outline" id="kt_image_1">
+                                    <div class="image-input-wrapper">
+                                        <img class="image-input-wrapper" style="background:grey" id="blahimg" src="{{this.image}}"></img>
+                                            <video class="image-input-wrapper" width="100" height="100" autoplay id="blah"></video>
+                                            <canvas class="image-input-wrapper" width="100" height="100" id="canva"></canvas>
+                                    </div>
+                                        <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Add User Image">
+                                        <i class="fa fa-camera icon-sm text-muted"></i>
+                                        <input name="inpFile" id="inpFile" accept=".png, .jpg, .jpeg"/>
+                                    </label>
+                                    <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
+																<i class="ki ki-bold-close icon-xs text-muted"></i>
+															</span>
+                                </div>
+                                <span class="form-text text-muted">Allowed file types: png, jpg, jpeg.</span>
+                            </div>
+                        </div>
+
+
+
+                        <script language="javascript">
+
+
+                            let video = document.querySelector('#blah');
+                            let canvas = document.querySelector('#canva');
+                            let context = canvas.getContext("2d");
+                            let vid = document.getElementById("blah");
+                            let canv = document.getElementById("canva");
+                            let imgfile = document.getElementById("inpFile");
+                            let oldimg = document.getElementById("blahimg")
+
+                            canv.style.display = "none";
+                            vid.style.display = "none";
+                            if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia){
+                                navigator.mediaDevices.getUserMedia({video : true}).then((stream) => {
+                                    video.srcObject = stream;
+                                    video.play();
+                                })
+                            }
+
+                            document.getElementById("inpFile").addEventListener("click",()=>{
+                                if(canv.style.display != "block") {
+                                    context.drawImage(video, 0, 0, 100, 100);
+                                    oldimg.style.display = "none";
+                                    vid.style.display = "none";
+                                    canv.style.display = "block";
+                                    var myImage1 = canvas.toDataURL("image/png");
+                                    let imgfile1 = new Image();
+                                    imgfile1.src = myImage1;
+                                    console.log(imgfile1);
+                                    document.getElementById("imgpath").value = imgfile1.src;
+                                } else {
+                                    context.drawImage(video, 0, 0, 100, 100);
+                                    oldimg.style.display = "none";
+                                    vid.style.display = "block";
+                                    canv.style.display = "none";
+                                    var myImage1 = canvas.toDataURL("image/png");
+                                    let imgfile1 = new Image();
+                                    imgfile1.src = myImage1;
+                                    console.log(imgfile1);
+                                    document.getElementById("imgpath").value = imgfile1.src;
+                                }
+                            })
+
+                        </script>
+
+
+                        <div class="form-group">
+                            <input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="number" value="{{this.mobile_no}}" placeholder="Mobile Number" name="cmno" autocomplete="off" />
+                        </div>
+
+                        <div class="form-group">
+                            <input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="tel" value="{{this.email_id}}" placeholder="Email" name="cemail" autocomplete="off" />
+                        </div>
+
+                        <div class="form-group">
+                            <input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="email" value="{{this.location}}" placeholder="City" name="ccity" autocomplete="off" />
+                        </div>
+
+                        <div class="form-group">
+                            <input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="text" placeholder="Address" value="{{this.address}}" name="caddress" autocomplete="off" />
+                        </div>
+
+                        <div class="form-group">
+                            <select name="cgender" class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6">
+                                <option value="m">Male</option>
+                                <option value="f">Female</option>
+                            </select>
+                        </div>
+
+
+                        <!--end::Form group-->
+                        <!--begin::Form group-->
+                        <div class="form-group">
+                            <input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="password" placeholder="Password" value="{{this.password}}" name="cpassword" autocomplete="off" />
+                        </div>
+                        <!--end::Form group-->
+                        <!--begin::Form group-->
+                        <div class="form-group">
+                            <input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="password" placeholder="Confirm password" name="ccpassword" value="{{this.password}}" autocomplete="off" />
+                        </div>
+                        <!--end::Form group-->
+
+                        <!--begin::Form group-->
+                        <div class="form-group d-flex flex-wrap pb-lg-0 pb-3">
+                            <button type="submit" class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-4">{{this.btn}}</button>
+                        </div>
+                        <!--end::Form group-->
+                    </form>
+
+                    <!--end::Form-->
+                </div>
+                <!--end::Signin-->
+
+                <!--end::Forgot-->
+            </div>
+
+        </div>
+        <!--end::Login-->
+    </div>
+</div>
+    <!--end::Main-->
+<script src="scripts/createuser.js"></script>
+</div>
+
+
+
+
+{{> fotter}}

@@ -1,0 +1,357 @@
+{{> aside}}
+{{> header}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--begin::Subheader-->
+<div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
+    <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+        <!--begin::Info-->
+        <div class="d-flex align-items-center flex-wrap mr-2">
+            <!--begin::Page Title-->
+            <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Edit Blog</h5>
+            <!--end::Page Title-->
+
+        </div>
+        <!--end::Toolbar-->
+    </div>
+</div>
+<!--end::Subheader-->
+
+
+
+<div class="d-flex flex-column-fluid">
+    <!--begin::Container-->
+    <div class="container">
+        <!--begin::Card-->
+        <div class="card card-custom card-transparent">
+            <div class="card-body p-0">
+                <!--begin::Wizard-->
+                <div class="wizard wizard-4" id="kt_wizard" data-wizard-state="step-first" data-wizard-clickable="true">
+
+                    <!--begin::Card-->
+                    <div class="card card-custom card-shadowless rounded-top-0">
+                        <!--begin::Body-->
+                        <div class="card-body p-0">
+                            <div class="row justify-content-center py-8 px-8 py-lg-15 px-lg-10">
+                                <div class="col-xl-12 col-xxl-10">
+                                    <!--begin::Wizard Form-->
+                                    <form class="form" id="kt_form_edit" enctype="multipart/form-data">
+                                        <div class="row justify-content-center">
+                                            <div class="col-xl-12">
+                                                <!--begin::Wizard Step 1-->
+                                                <div class="my-5 step" data-wizard-type="step-content" data-wizard-state="current">
+                                                    <h5 class="text-dark font-weight-bold mb-10">Edit Blog:</h5>
+
+
+
+                                                    <input class="form-control" id="bid" name="bid" value="" style="display:none;"></input>
+                                                    <input class="form-control" id="imgpath" name="imgpath" value="" style="display:none;"></input>
+
+
+
+
+
+
+                                                    <!--begin::Group-->
+                                                    <div class="form-group row">
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            <input class="form-control form-control-solid form-control-lg" type="text" id="btitle" name="btitle" placeholder="Title" value=""/>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Group-->
+
+
+
+                                                    <div class="form-group row">
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            <input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg" type="text" placeholder="Short description" id="shortdes" name="shortdes" autocomplete="off" />
+                                                        </div>
+                                                    </div>
+
+
+
+
+
+                                                    <div class="form-group row">
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            <h5 class="text-dark font-weight-bold">Header Image</Header>:</h5>
+                                                            <div class="image-input image-input-outline" id="kt_image_1">
+                                                                <img class="image-input-wrapper" style="background:grey" id="blah"></img>
+
+                                                                <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Add Header Image">
+                                                                    <i class="fa fa-plus icon-sm text-muted"></i>
+                                                                    <input type="file" name="inpFile" id="inpFile" accept=".png, .jpg, .jpeg"/>
+                                                                    <script language="javascript">
+                                                                        inpFile.onchange = evt => {
+                                                                            const [file] = inpFile.files
+                                                                            if (file) {
+                                                                                blah.src = URL.createObjectURL(file)
+                                                                            }
+                                                                        }
+                                                                    </script>
+                                                                </label>
+                                                                <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
+																<i class="ki ki-bold-close icon-xs text-muted"></i>
+															</span>
+                                                            </div>
+                                                            <span class="form-text text-muted">Allowed file types: png, jpg, jpeg.</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--end::Group-->
+
+
+
+
+
+                                                <!--begin::Group-->
+                                                <div class="form-group row">
+                                                    <div class="col-lg-9 col-xl-9">
+                                                        <!--begin::Card-->
+                                                        <div class="card card-custom example example-compact">
+                                                            <div class="card-header">
+                                                                <h3 class="card-title">Description</h3>
+                                                                <div class="card-toolbar">
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div id="kt_quil_2" name="des" style="height: 325px"></div>
+                                                                <!--begin: Code-->
+                                                                <div class="example-code mt-10">
+
+                                                                    <span class="example-copy" data-toggle="tooltip" title="Copy code"></span>
+                                                                    <div class="tab-content">
+                                                                        <div class="tab-pane active" id="example_code_html2" role="tabpanel">
+                                                                            <div class="example-highlight">
+																				<pre style="height:400px">
+																					<code class="language-html">
+																						&lt;div class="card card-custom"&gt;
+																							&lt;div class="card-header"&gt;
+																								&lt;h3 class="card-title"&gt;
+																									Auto Save
+																								&lt;/h3&gt;
+																							&lt;/div&gt;
+																							&lt;div class="card-body"&gt;
+																								&lt;div id="kt_quil_2" style="height: 325px"&gt;
+																									Compose a message
+																								&lt;/div&gt;
+																							&lt;/div&gt;
+																						&lt;/div&gt;
+																					</code>
+																				</pre>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="tab-pane" id="example_code_js2">
+                                                                            <div class="example-highlight">
+																		<pre style="height:400px">
+																		<code class="language-js">
+																	// Class definition
+																	var KTQuilDemos = function() {
+
+																		// Private functions
+																		var demo2 = function() {
+																			var Delta = Quill.import('delta');
+																			var quill = new Quill('#kt_quil_2', {
+																				modules: {
+																					toolbar: true
+																				},
+																				placeholder: 'Type your text here...',
+																				theme: 'snow'
+																			});
+
+																			// Store accumulated changes
+																			var change = new Delta();
+																			quill.on('text-change', function(delta) {
+																				change = change.compose(delta);
+																			});
+
+																			// Save periodically
+																			setInterval(function() {
+																				if (change.length() &gt; 0) {
+																					console.log('Saving changes', change);
+																					/*
+																					Send partial changes
+																					$.post('/your-endpoint', {
+																					partial: JSON.stringify(change)
+																					});
+
+																					Send entire document
+																					$.post('/your-endpoint', {
+																					doc: JSON.stringify(quill.getContents())
+																					});
+																					*/
+																					change = new Delta();
+																				}
+																			}, 5 * 1000);
+
+																			// Check for unsaved data
+																			window.onbeforeunload = function() {
+																				if (change.length() &gt; 0) {
+																					return 'There are unsaved changes. Are you sure you want to leave?';
+																				}
+																			}
+																		}
+
+																		return {
+																			// public functions
+																			init: function() {
+																				demo2();
+																			}
+																		};
+																	}();
+
+																	jQuery(document).ready(function() {
+																		KTQuilDemos.init();
+																	});
+
+																	</code>
+																		</pre>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!--end: Code-->
+                                                            </div>
+                                                        </div>
+                                                        <!--end::Card-->
+                                                    </div>
+                                                </div>
+                                                <!--end::Group-->
+
+
+                                                <!--begin::Group-->
+                                                <div class="form-group row">
+                                                    <div class="col-lg-9 col-xl-9">
+                                                        <input class="form-control form-control-solid form-control-lg" type="text" value="" id="mtitle" name="mtitle" placeholder="Meta title"/>
+                                                    </div>
+                                                </div>
+                                                <!--end::Group-->
+                                                <!--begin::Group-->
+                                                <div class="form-group row">
+                                                    <div class="col-lg-9 col-xl-9">
+                                                        <input class="form-control form-control-solid form-control-lg" name="mkeyword" id="mkeyword" type="text" placeholder="Meta Keyword"/>
+                                                    </div>
+                                                </div>
+                                                <!--end::Group-->
+                                                <!--begin::Group-->
+                                                <div class="form-group row">
+                                                    <div class="col-lg-9 col-xl-9">
+                                                        <textarea rows="4" cols="50" class="form-control form-control-solid form-control-lg" name="mdescription" id="mdescription" type="text" value="" placeholder="Meta description" ></textarea>
+                                                    </div>
+                                                </div>
+                                                <!--end::Group-->
+                                                <!--begin::Group-->
+                                                <div class="form-group row">
+                                                    <div class="col-lg-9 col-xl-9">
+                                                        <input class="form-control form-control-solid form-control-lg" name="seo_url" type="text" id="seo_url" placeholder="SEO url"/>
+                                                    </div>
+                                                </div>
+                                                <!--end::Group-->
+
+                                                <!--//if(!!file.type.match(/image.*/)) -->
+                                                <div>
+                                                    <button type="submit" class="btn btn-primary font-weight-bolder px-9 py-4">Submit</button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                        <!--end::Wizard Actions-->
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                            <!--end::Wizard Form-->
+                        </div>
+                    </div>
+                </div>
+                <!--end::Body-->
+            </div>
+            <!--end::Card-->
+        </div>
+        <!--end::Wizard-->
+    </div>
+</div>
+<!--end::Card-->
+
+
+
+
+
+<script language="javascript">
+
+    web = window.location.href;
+    urlParams = parseURLParams(web);
+    id = urlParams._id;
+
+
+    function parseURLParams(url) {
+        var queryStart = url.indexOf("?") + 1,
+                queryEnd   = url.indexOf("#") + 1 || url.length + 1,
+                query = url.slice(queryStart, queryEnd - 1),
+                pairs = query.replace(/\+/g, " ").split("&"),
+                parms = {}, i, n, v, nv;
+
+        if (query === url || query === "") return;
+
+        for (i = 0; i < pairs.length; i++) {
+            nv = pairs[i].split("=", 2);
+            n = decodeURIComponent(nv[0]);
+            v = decodeURIComponent(nv[1]);
+
+            if (!parms.hasOwnProperty(n)) parms[n] = [];
+            parms[n].push(nv.length === 2 ? v : null);
+        }
+        return parms;
+    }
+
+
+    $.ajax({
+        type: "post",
+        url: "api/getdata_click",
+        data: {"id":id,},
+        success: function (obj) {
+            document.getElementById('bid').value =  obj.data._id;
+            document.getElementById('btitle').value = obj.data.title;
+            document.getElementById('shortdes').value = obj.data.short_des;
+            document.getElementById('blah').src = obj.data.image;
+            document.getElementById('imgpath').value = obj.data.image;
+            document.getElementById('kt_quil_2').textContent = obj.data.des;
+            document.getElementById('mtitle').value = obj.data.meta_title;
+            document.getElementById('mkeyword').value = obj.data.meta_keyword;
+            document.getElementById('mdescription').value = obj.data.meta_desc;
+            document.getElementById('seo_url').value = obj.data.seo_url;
+        },
+    });
+
+</script>
+
+
+
+
+
+
+<script src="scripts/editblog.js"></script>
+
+
+
+{{> fotter}}

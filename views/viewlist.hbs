@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from themerange.net/html/merix/merix/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Feb 2021 21:26:46 GMT -->
+<head>
+    <meta charset="utf-8">
+    <title>Merix Creative Digital Agency HTML-5 Template | Homepage 01</title>
+    <!-- Stylesheets -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&amp;family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+    <!-- Color Switcher Mockup -->
+    <link href="assets/css/color-switcher-design.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="assets/js/respond.js"></script><![endif]-->
+
+
+
+
+    <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body class="hidden-bar-wrapper">
+
+<div class="page-wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="box"></div>
+    </div>
+
+    <!-- Services Section Two -->
+    <section class="services-section-two style-two">
+        <div class="auto-container bg-light">
+            <!-- Sec Title -->
+            <div class="sec-title centered">
+                <div class="title mt-5">Our Blogs</div>
+                <h2>Our latest Media - Our Blog</h2>
+            </div>
+            <div class="inner-container">
+                <div class="clearfix">
+
+
+                    {{#each blog}}
+                        <a href="/dispblog/?id={{this._id}}">
+                                <!-- Service Block Two / Style Two -->
+                                <div class="service-block-two style-two col-lg-4 col-md-6 col-sm-12">
+                                    <div class="inner-box bg-secondary my-5 mx-5">
+                                        <div class="color-layer"></div>
+                                        <div class="icon-box">
+                                            <div class="image-input image-input-outline" id="kt_image_1">
+                                                <img class="image-input-wrapper" id="blah" src={{#json this.image}}{{/json}}>
+                                            </div>
+                                        </div>
+                                        <h5>{{this.title}}</h5>
+                                        <div class="text">{{this.short_des}}</div>
+                                    </div>
+                                </div>
+                        </a>
+                    {{/each}}
+                </div>
+                </div>
+            </div>
+
+    </section>
+
+</div>
+    <!-- End Services Section Two -->
+
+
+
+<!-- Scroll To Top -->
+<div class="back-to-top scroll-to-target show-back-to-top" data-target="html">TOP</div>
+
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/jquery.fancybox.js"></script>
+<script src="assets/js/appear.js"></script>
+<script src="assets/js/parallax.min.js"></script>
+<script src="assets/js/tilt.jquery.min.js"></script>
+<script src="assets/js/jquery.paroller.min.js"></script>
+<script src="assets/js/owl.js"></script>
+<script src="assets/js/wow.js"></script>
+<script src="assets/js/nav-tool.js"></script>
+<script src="assets/js/jquery-ui.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/color-settings.js"></script>
+
+</body>
+
+<!-- Mirrored from themerange.net/html/merix/merix/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Feb 2021 21:27:57 GMT -->
+</html>

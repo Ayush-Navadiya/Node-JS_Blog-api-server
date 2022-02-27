@@ -1,0 +1,139 @@
+{{> aside}}
+{{> header}}
+
+
+
+<!--begin::Subheader-->
+<div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
+    <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+        <!--begin::Info-->
+        <div class="d-flex align-items-center flex-wrap mr-2">
+            <!--begin::Page Title-->
+            <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Posts</h5>
+            <!--end::Page Title-->
+
+        </div>
+        <!--end::Toolbar-->
+    </div>
+</div>
+<!--end::Subheader-->
+
+
+
+<style>
+    .container
+    {
+        width:900px;
+        padding:20px;
+        background-color:#fff;
+        border:1px solid #ccc;
+        border-radius:5px;
+        margin-top:10px;
+    }
+</style>
+
+
+
+
+
+
+
+<!--begin::Advance Table Widget 4-->
+<div class="card card-custom card-stretch gutter-b">
+
+    <!--begin::Body-->
+    <div class="card-body pt-0 pb-3">
+        <div class="tab-content">
+
+
+
+
+
+
+            <!--begin::Entry-->
+            <div class="d-flex flex-column-fluid">
+                <!--begin::Container-->
+                <div class="container">
+
+                    <!--begin::Card-->
+                    <div class="card card-custom">
+                        <div class="card-header flex-wrap border-0 pt-6 pb-0">
+                            <div class="card-title">
+                                <h3 class="card-label">Users</h3>
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <!--begin: Datatable-->
+                            <table class="table table-bordered table-hover table-checkable mt-10" id="data_user">
+                                <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>User Name</th>
+                                    <th>Image</th>
+                                    <th>Created Date</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                            <!--end: Datatable-->
+                        </div>
+                    </div>
+                    <!--end::Card-->
+                </div>
+                <!--end::Container-->
+            </div>
+
+
+
+
+
+
+
+
+
+            <script language="javascript">
+
+
+
+
+
+
+                /*    $.ajax({
+                        type: "GET",
+                        url: "<?php // echo site_url('Postd_click');?>",
+                        dataType: "html",
+                        success: function(data){
+                            $("#table-container").html(data);
+
+                        }
+                    });
+
+                    function blogdelete()
+                    {
+                        window.location.href = "http://localhost/admin/login/Blog_delete";
+                    }
+
+                    function blogedit()
+                    {
+                        window.location.href = "http://localhost/admin/login/Blog_edit";
+                    }     */
+            </script>
+
+
+
+            <script src="scripts/users.js"></script>
+            <!--end::Page Scripts-->
+
+        </div>
+    </div>
+    <!--end::Body-->
+</div>
+<!--end::Advance Table Widget 4-->
+
+{{> fotter}}
