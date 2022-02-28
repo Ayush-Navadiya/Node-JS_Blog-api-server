@@ -6,7 +6,8 @@ Node JS server(with Handlebars, Express, Mongoose, MongoDB, JavaScript, jQuery, 
 
 1. Download Node JS from : https://nodejs.org/
 2. Install Node JS
-3. Check if installed successfully using commands: 1. node --version
+3. Check if installed successfully using commands: \
+                                                   1. node --version\
                                                    2. npm --version
 
 
