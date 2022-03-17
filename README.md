@@ -22,6 +22,6 @@ Node JS server(with Handlebars, Express, Mongoose, MongoDB, JavaScript, jQuery, 
 
 
 ---
-### Contribute 
+# Contribute 
 
 Give a thanks with coffee [Here](https://www.buymeacoffee.com/ayushnavadiya).
